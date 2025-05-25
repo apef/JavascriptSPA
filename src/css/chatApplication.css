@@ -1,0 +1,146 @@
+.loginScreenBox {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#chatLoginButton {
+  position: relative;
+}
+
+#chatSettingsBox {
+  display: flex;
+  height: 4%;
+  position: relative;
+}
+
+#chatSettingsMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+#menuItemChangeBox {
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputControlsBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  gap: 1%;
+  
+}
+
+.inputControlsBox > button {
+  width: 10%;
+  height: 100%;
+}
+
+
+#usernameChangeBox > button {
+  width: 50%;
+  height: 100%;
+}
+
+#changeUsernameButtonsBox {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#confirmButtonText {
+  font-size:small;
+}
+
+#cancelButtonText {
+  font-size:small;
+}
+
+.dropbtn {
+  background-color: #444428;
+  color: white;
+  width: 8%;
+  height: 100%;
+}
+
+.dropdown-content {
+  position: relative;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.555) 10%, rgba(73,171,237,0.9051995798319328) 51%, rgba(255, 255, 255, 0.411) 100%);
+  top: 10px;
+  right: 24px;
+  width: 100%;
+}
+
+#chatSection {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+}
+
+#chatLogBox {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.255) 10%, rgba(146, 209, 252, 0.905) 51%, rgba(255, 255, 255, 0.411) 100%);
+  width: 90%;
+  height: 80%;
+  overflow-y: auto;
+  border: 1px solid #ccc
+}
+
+#chatUserMessageInput {
+  width: 90%;
+}
+
+#chatSendBtn {
+  height: 100%;
+}
+
+
+.chatMessage {
+  background-color: rgba(246, 244, 248, 0.178);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+.chatMessage:hover {
+  background-color: rgba(246, 244, 248, 0.425);
+}
+
+.chatUsernameBox {
+  background: rgba(0, 0, 0, 0.11);
+  margin-bottom: 5px;
+  align-items: center;
+  gap: 5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.473) 10%, rgb(182, 255, 251) 100%);
+  position: absolute;
+  top: -250%;
+  left: 5%;
+  z-index: 2;
+}
+
+.emoji {
+  opacity: 0.6;
+  box-sizing: border-box;
+  margin: 1px;
+}
+
+.emoji:hover {
+  opacity: 1.0;
+  outline: solid 1px black;
+}

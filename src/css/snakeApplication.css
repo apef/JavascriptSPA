@@ -1,0 +1,44 @@
+.SnakeGameArea {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(20, 5%);
+}
+
+.SnakeGameMenuBox {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(250, 231, 149, 0.404);
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.SnakeGameMenuBox > h1 {
+  margin-bottom: 0px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.SnakeGameMenuBox > button {
+  min-width: 20%;
+  margin-bottom: 10px;
+}
+
+.cell {
+  background: white;
+  border: solid 1px black;
+}
+
+.player1snake {
+  background: rgb(255, 8, 0);
+}
+
+.player2snake {
+  background: rgb(0, 140, 255);
+}
+
+.food {
+  background: rgb(0, 150, 0);
+}

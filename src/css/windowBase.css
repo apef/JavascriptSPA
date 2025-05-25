@@ -1,0 +1,222 @@
+/* Window base class, made for being the base for draggable items */
+
+.item {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  min-width: 400px;
+  min-height: 400px;
+  max-width: 60%;
+  max-height: 60%;
+  border: 2px solid rgb(166, 205, 255);
+  padding: 0px;
+  margin: 0px;
+  aspect-ratio: 1 / 1;
+}
+
+.windowHeader {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  position: relative;
+  top: 0%;
+  height: 10%;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,0.19931722689075626) 0%, rgba(73,171,237,0.9051995798319328) 51%, rgba(255,255,255,0.19931722689075626) 100%);
+
+}
+
+.windowMain {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  top: 0%;
+  height: 100%;
+  background: rgb(203,246,255);
+  background: linear-gradient(0deg, rgba(203,246,255,0.87718837535014) 0%, rgba(98,229,255,0.87718837535014) 32%, rgba(39,150,238,1) 62%);
+}
+
+.windowFooter {
+  display: flex;
+  height: 10%;
+  background: rgba(203,246,255,0.87718837535014);
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+#windowTitleBox {
+  display: flex;
+  flex-direction: row;
+}
+
+#windowTitle {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: medium;
+  margin-left: 5px;
+}
+
+#windowTitleIcon {
+  width: 14%;
+  min-width: 38px;
+  height: 100%;
+}
+
+.headerButtons {
+  display: flex;
+}
+
+.windowCloseButton {
+  min-width: 40px;
+  min-height: 16px;
+  height: 50%;
+  width: 10%;
+  background: rgb(255,151,151);
+  background: linear-gradient(180deg, rgba(255,151,151,1) 23%, rgba(219,51,51,1) 57%, rgba(255,130,130,1) 100%);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.windowCloseButton:hover {
+  box-shadow: 0px 0px 25px 1px rgba(230,29,29,0.56);
+  background: rgb(255,107,107);
+  background: linear-gradient(180deg, rgba(255,107,107,1) 23%, rgba(231,22,22,1) 57%, rgba(252,82,82,1) 100%);
+}
+
+#windowExitButtonIcon {
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:700;
+  font-size: small;
+  position: relative;
+  bottom: 2px;
+  color: aliceblue;
+  border: #444428;
+}
+
+.windowMinimizeButton {
+  top: 0%;
+  height: 50%;
+  width: 8%;
+  min-width: 32px;
+  min-height: 16px;
+  background: rgb(203,246,255);
+  background: linear-gradient(180deg, rgba(203,246,255,0.87718837535014) 0%, rgba(98,229,255,0.87718837535014) 32%, rgba(39,150,238,1) 62%);
+  padding: 0px;
+}
+
+.windowMinimizeButton:hover {
+  box-shadow: 0px 0px 25px 1px rgba(29,194,230,0.56);
+  background: rgb(161,239,255);
+  background: linear-gradient(180deg, rgba(161,239,255,1) 23%, rgba(70,224,255,1) 57%, rgba(17,145,246,1) 100%);
+}
+
+#windowMinimizeButtonIcon {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight:600;
+  font-size: medium;
+  position: relative;
+  bottom: 2px;
+  color: aliceblue;
+  border: #444428;
+}
+
+.active {
+  z-index: 1;
+  box-shadow: -1px 9px 15px 0px rgba(0,0,0,0.69);
+}
+
+.hidden {
+  display: none;
+}
+
+#windowMenuBar {
+  display: flex;
+  background: rgb(55, 114, 153);
+  width: 100%;
+}
+
+.menuItem {
+  position: relative;
+}
+
+.menuButton {
+  border: none;
+}
+
+.dropdownMenu {
+  background: rgba(144, 192, 204, 0.76);
+  position: absolute;
+  z-index: 2;
+}
+
+.dropdownItem {
+  background: rgb(255, 255, 255);
+  margin-bottom: 2px
+}
+
+.dropdownItem:hover {
+  background: rgb(190, 190, 190);
+}
+
+/* Used to set items into a flex-row */
+.rowFlex {
+  display: flex;
+  flex-direction: row;
+}
+
+
+button {
+  border: none;
+  position: relative;
+}
+
+/* Used as a transition between a displayed element and it being hidden (with a smooth fade out) */
+.minimizing {
+  transition: height 0.5s ease, opacity 0.5s ease;
+  height: 0; 
+  opacity: 0; 
+  overflow: hidden;
+}
+
+
+/* Hiscore area styling */
+.highScoreArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;    
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.highScoreArea > table, th, td {
+  border: 1px solid rgb(104, 104, 104);
+}
+
+.highScoreArea > table {
+  margin-bottom: 5px;
+}
+
+/* Centering the text in the highscoretable */
+.highScoreArea > th, td, h1 {
+  padding: 0.3em;
+  text-align: center;
+}
+.highScoreArea > h1 {
+  margin: 0;
+}
+
+span {
+  font-size: x-small;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.footerTextBox {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 5px;
+}

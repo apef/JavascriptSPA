@@ -1,0 +1,51 @@
+.paintGrid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(20, 5%);
+}
+
+.colorCell {
+  background: white;
+  border: solid 1px rgb(0, 0, 0);
+}
+
+.colorCell:hover {
+  border: none;
+  outline: solid 2px rgb(2, 138, 192);
+  z-index: 1;
+}
+
+.colorsArea {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(4, 3%);
+}
+
+/* Style of the pseudo-popup that is displayed on-top of the main div for this application */
+.popUp {
+  background: linear-gradient(0deg, rgba(203,246,255,0.87718837535014) 0%,  rgba(84, 171, 243, 0.925) 62%);
+  position: absolute;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  left: 20%;
+  top: 10%;
+  height: 70%;
+  width: 60%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: -1px 9px 15px 0px rgba(0,0,0,0.69);
+}
+
+.popUpImageButtons {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  width: 60%;
+  height: 30%;
+  margin: 5px;
+}

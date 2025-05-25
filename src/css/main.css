@@ -1,0 +1,42 @@
+main {
+  overflow: auto;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#desktopIconsArea {
+  margin: 3%;
+}
+
+.application {
+  font-size: small;
+  display: flex;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Adding a small outline to the h1 elements using a uniform box-shadow (same boxshadow on each sides of the h1) */
+.application > h1 {
+  color: aliceblue;
+  text-shadow: 
+  -1px -1px 0 black,
+   1px -1px 0 black, 
+  -1px  1px 0 black,
+   1px  1px 0 black; 
+}
+
+/* Adding a smooth transition on the desktop icons (used when resizing them while hovered) */
+.desktopIcon {
+  width: 5%;
+  height: 10%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Give the desktop icons an outline and make them slightly larger when hovered */
+.desktopIcon:hover {
+  outline: solid 1px black;
+  transform: scale(1.1);
+}
